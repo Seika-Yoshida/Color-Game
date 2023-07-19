@@ -1,0 +1,42 @@
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 510px; // Change grid width to accommodate 6 tiles
+    margin: 0 auto;
+}
+
+.hexagon {
+    position: relative;
+    width: 57.74px;
+    height: 100px;
+    background-color: pink;
+    margin: 1px 0;
+    cursor: pointer;
+}
+
+.hexagon:before,
+.hexagon:after {
+    content: "";
+    position: absolute;
+    width: 57.74px;
+    height: 50px;
+    background-color: inherit;
+}
+
+.hexagon:before {
+    top: -25px;
+    left: 0;
+    transform: rotate(60deg);
+    transform-origin: 0 25px;
+}
+
+.hexagon:after {
+    top: -25px;
+    right: 0;
+    transform: rotate(-60deg);
+    transform-origin: 100% 25px;
+}
+
+.hexagon-row:nth-of-type(odd) {
+    margin-left: 28.87px;
+}
